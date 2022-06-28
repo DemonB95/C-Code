@@ -18,18 +18,21 @@ void solve()
 {
     ll n;
     cin>>n;
-    rep(i,2,n+2)
+    vll v(n);
+    rep(i,0,n)
     {
-        cout<<i<<" ";
+        cin>>v[i];
     }
+    sort(va(v));
+    
  
 }
 int main()
 {
 demonb95;
   
-ll t=1;
-// cin>>t;
+ll t;
+cin>>t;
 while(t--)
 {
    solve(); 

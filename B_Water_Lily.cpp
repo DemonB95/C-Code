@@ -16,12 +16,10 @@ typedef long long int  lli;
 #define demonb95 ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 void solve()
 {
-    ll n;
-    cin>>n;
-    rep(i,2,n+2)
-    {
-        cout<<i<<" ";
-    }
+    double h,l,ans;
+    cin>>h>>l;
+    ans=(l*l-h*h)/h/2;
+    cout<<fixed<<setprecision(10)<<ans<<endl;
  
 }
 int main()
@@ -29,7 +27,7 @@ int main()
 demonb95;
   
 ll t=1;
-// cin>>t;
+//cin>>t;
 while(t--)
 {
    solve(); 

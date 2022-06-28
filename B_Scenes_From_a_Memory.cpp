@@ -14,22 +14,44 @@ typedef long long int  lli;
 #define endl "\n"
 #define rep(i,a,b) for(ll i = a; i < b; i++)
 #define demonb95 ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+bool isPrime(int n)
+{
+    
+    if (n <= 1)
+        return false;
+ 
+    
+    for (int i = 2; i <= sqrt(n); i++)
+        if (n % i == 0)
+            return false;
+ 
+    return true;
+}
 void solve()
 {
-    ll n;
-    cin>>n;
-    rep(i,2,n+2)
-    {
-        cout<<i<<" ";
-    }
+   ll n;
+   cin>>n;
+   string s;
+   cin>>s;
+   rep(i,0,n)
+   {
+      if(s[i]=='1')
+      {
+         cout<<1<<endl;
+         cout<<1<<endl;
+         return ;
+      }
+   }
+   
+
  
 }
 int main()
 {
 demonb95;
   
-ll t=1;
-// cin>>t;
+ll t;
+cin>>t;
 while(t--)
 {
    solve(); 

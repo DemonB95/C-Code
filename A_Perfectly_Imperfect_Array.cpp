@@ -14,25 +14,36 @@ typedef long long int  lli;
 #define endl "\n"
 #define rep(i,a,b) for(ll i = a; i < b; i++)
 #define demonb95 ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-void solve()
-{
-    ll n;
-    cin>>n;
-    rep(i,2,n+2)
-    {
-        cout<<i<<" ";
-    }
- 
-}
+
 int main()
 {
 demonb95;
   
-ll t=1;
-// cin>>t;
+ll t;
+cin>>t;
 while(t--)
 {
-   solve(); 
+   int n;
+   cin>>n;
+   int x;
+   bool flag=false;
+   for(int i =0 ; i<n ; i++)
+   {
+       cin>>x;
+       int y =  sqrt(x);
+       if(y*y !=x)
+       {
+           flag=true;
+       }
+   }
+   if(flag)
+   {
+       cout<<"YES"<<endl;
+   }
+   else
+   {
+       cout<<"NO"<<endl;
+   }
 }
 return 0;
 }

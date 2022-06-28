@@ -3,8 +3,8 @@ using namespace std;
 typedef long long ll;
 typedef long long int  lli;
 #define pb push_back 
-#define va(a) a.begin(),a.end()
-#define vd(d) d.begin(),d.end(),greater<ll>()
+#define va v.begin(),v.end()
+#define vd v.begin(),v.end(),greater<ll>()
 #define vi vector<int> 
 #define vll vector<long long >
 #define pb push_back 
@@ -16,12 +16,18 @@ typedef long long int  lli;
 #define demonb95 ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 void solve()
 {
-    ll n;
+    int n;
     cin>>n;
-    rep(i,2,n+2)
+    string s;
+    cin>>s;
+    rep(i,0,n)
     {
-        cout<<i<<" ";
+        if(n%(i+1)==0)
+        {
+            reverse(s.begin(),s.begin()+i+1);
+        }
     }
+    cout<<s<<endl;
  
 }
 int main()
@@ -29,10 +35,10 @@ int main()
 demonb95;
   
 ll t=1;
-// cin>>t;
+//cin>>t;
 while(t--)
 {
-   solve(); 
+ solve(); 
 }
 return 0;
 }

@@ -16,13 +16,11 @@ typedef long long int  lli;
 #define demonb95 ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 void solve()
 {
-    ll n;
-    cin>>n;
-    rep(i,2,n+2)
-    {
-        cout<<i<<" ";
-    }
- 
+    string s;
+    cin>>s;
+    string t="Hello,World!";
+    if(s==t) cout<<"AC";
+    else cout<<"WA";
 }
 int main()
 {

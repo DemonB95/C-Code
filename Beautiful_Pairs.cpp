@@ -3,8 +3,8 @@ using namespace std;
 typedef long long ll;
 typedef long long int  lli;
 #define pb push_back 
-#define va(a) a.begin(),a.end()
-#define vd(d) d.begin(),d.end(),greater<ll>()
+#define va v.begin(),v.end()
+#define vd v.begin(),v.end(),greater<ll>()
 #define vi vector<int> 
 #define vll vector<long long >
 #define pb push_back 
@@ -18,21 +18,37 @@ void solve()
 {
     ll n;
     cin>>n;
-    rep(i,2,n+2)
+    vll v(n);
+    rep(i,0,n) cin>>v[i];
+    
+    sort(va);
+    ll count=0;
+    rep(i,0,n)
     {
-        cout<<i<<" ";
+        rep(j,0,n)
+        {
+            if(i==j)
+            {
+                continue;
+            }
+            ll x=v[i]-v[j];
+
+            if(x/v[i] < x/v[j]) count++;
+        }
     }
+    cout<<count<<endl;
  
+
 }
 int main()
 {
 demonb95;
   
-ll t=1;
-// cin>>t;
+ll t;
+cin>>t;
 while(t--)
 {
-   solve(); 
+ solve(); 
 }
 return 0;
 }
